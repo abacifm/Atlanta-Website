@@ -131,20 +131,49 @@ body, html {
     font-size: 60px;
 }
 
-
-.square-box {
+.poster-slider {
+    position: relative; /* Enable relative positioning for child elements */
+    overflow: hidden; /* Hide overflowing content */
+    width: 100%; /* Set width for the slider */
+    height: 400px; /* Set a fixed height for the slider (adjust as needed) */
+  }
+  
+  .poster {
+    position: absolute; /* Position posters absolutely within the slider */
+    top: 0;
+    left: 0;
+    width: 100%; /* Set width for each poster to fill the slider */
+    height: 100%; /* Set height for each poster to fill the slider (adjust as needed) */
+    transition: transform 0.5s ease-in-out; /* Add smooth transition for slide animation */
+  }
+  
+  .poster.active {
+    opacity: 1; /* Set opacity for the active slide */
+    z-index: 1; /* Set z-index for the active slide to appear on top */
+  }
+  
+  .poster:not(.active) {
+    opacity: 0; /* Hide inactive slides */
+    z-index: 0; /* Set z-index for inactive slides */
+    transform: translateX(100%); /* Position inactive slides off-screen to the right */
+  }
+  
+  /* Additional styling for aesthetics (optional) */
+  .poster img {
+    width: 100%; /* Set image width to fill the poster element */
+    height: auto; /* Maintain aspect ratio for images */
+  }
+  
+  /* Styles from your previous code */
+  .square-box {
     background-color: white;
-    width: 400px; /* Adjust as needed */
-    height: 550px; /* Adjust as needed */
-    margin: 100px;  /* Add some margin for separation */
+    width: 400px;
+    height: 550px; /* Adjust height to accommodate slider and timer */
+    margin: 100px;
     margin-top: 50px;
-    border: 1px solid #ddd; /* Optional border */
-}
-.square-box img {
-    width: 400px; /* Scales image to fit box width */
-    height: 400px; /* Scales image to fit box height */
-    object-fit: contain;
-}
+    border: 1px solid #ddd;
+  }
+
 .countdown-container {
     display: flex; /* Enables flexbox for timer elements */
     justify-content: space-between; /* Distributes timer boxes horizontally */
