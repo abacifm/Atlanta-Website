@@ -11,7 +11,7 @@ function showNextSlide() {
 }
 
 // Start the image change interval
-setInterval(showNextSlide, 5000); // Change image every 5 seconds (5000 milliseconds)
+setInterval(showNextSlide, 7000); // Change image every 5 seconds (5000 milliseconds)
 
 const slider1 = document.querySelector('.poster-slider');
 const slides1 = document.querySelectorAll('.poster');
