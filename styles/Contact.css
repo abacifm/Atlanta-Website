@@ -1,316 +1,339 @@
+header.main-header {
+  background-color: rgba(
+    2,
+    47,
+    94,
+    1
+  ); /* Set a slight transparency for header */
+  position: fixed; /* Fix the header to the viewport */
+  top: 0; /* Position the header at the top of the viewport */
+  left: 0; /* Position the header at the left of the viewport */
+  width: 100%; /* Set the width to 100% of the viewport */
+  height: 110px;
+  z-index: 2;
+}
+
 #header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  #logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  #logo {
-    margin-right: 10px;
-  }
-  
-  #title-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-  
-  #title-line1,
-  #title-line2 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin: 0 10px;
-    text-align: center;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: blue;
-  }
-  
-  .contact-title {
-    text-align: left;
-    margin-bottom: 10px;
-    padding-left: 100px;
-    width: auto;
-    height: 150px;
-  }
-  body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Contact cards styles */
-  #contact-info {
-    max-width: 1200px; /* Adjust to suit the maximum width */
-    margin: 0 auto; /* This will center the section */
-  }
-  
-  .contact-row {
-    display: flex;
-    justify-content: center; /* This centers the cards on the row */
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
-    gap: 20px; /* Adjust the space between cards */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#title-line1,
+#title-line2 {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+.contact-title {
+  text-align: left;
+  margin-bottom: 10px;
+  padding-left: 100px;
+  width: auto;
+  height: 150px;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contact cards styles */
+#contact-info {
+  max-width: 1200px; /* Adjust to suit the maximum width */
+  margin: 0 auto; /* This will center the section */
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center; /* This centers the cards on the row */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  gap: 20px; /* Adjust the space between cards */
+}
+
+.contact-card {
+  background-color: #022f5e;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: calc(25% - 90px); /* Three cards per row, adjust gap if necessary */
+}
+
+.contact-card img {
+  width: 100%; /* This assumes the image will take the full width of the card */
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  color: white;
+  margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-card p {
+  color: white;
+  margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .contact-card {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    width: calc(25% - 90px); /* Three cards per row, adjust gap if necessary */
+    width: calc(50% - 20px); /* Two cards per row on medium screens */
   }
-  
-  .contact-card img {
-    width: 100%; /* This assumes the image will take the full width of the card */
-    height: auto;
-    border-radius: 20px;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    width: 100%; /* Full width on small screens */
   }
-  
-  .contact-card h3 {
-    color: #002366; /* Example color; adjust as needed */
-    margin-top: 0;
+}
+
+/* Google Map */
+.google-map {
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.google-map iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
+/* Contact form styles */
+#contact-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#contact-form h2 {
+  text-align: center;
+  color: #002366;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 0; /* To match the design in the image */
+}
+
+.form-group textarea {
+  height: 150px; /* Adjust height as needed */
+}
+
+.form-row .form-group {
+  width: 48%; /* This creates two columns, adjust the percentage as needed for spacing */
+}
+
+button[type="submit"] {
+  background-color: #022f5e;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  width: 30%;
+  margin-left: 35%;
+}
+
+/* Responsive styles if needed */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .contact-card {
-      width: calc(50% - 20px); /* Two cards per row on medium screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .contact-card {
-      width: 100%; /* Full width on small screens */
-    }
-  }
-  
-  /* Google Map */
-  .google-map {
-    margin: 20px 0;
-    border-radius: 5px;
-  }
-  
-  .google-map iframe {
+
+  .form-row .form-group {
     width: 100%;
-    height: 700px;
-    border: none;
   }
-  
-  /* Contact form styles */
-  #contact-form {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    #contact-form h2 {
-      text-align: center;
-      color: #002366;
-     
-    }
-    
-    .form-row {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
-    }
-    
-    .form-group label {
-      margin-bottom: 1px;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      padding:10px;
-      border: 1px solid #000;
-      border-radius: 0; /* To match the design in the image */
-    }
-    
-    .form-group textarea {
-      height: 150px; /* Adjust height as needed */
-    }
-    
-    .form-row .form-group {
-      width: 48%; /* This creates two columns, adjust the percentage as needed for spacing */
-    }
-    
-    button[type="submit"] {
-      background-color: #002366;
-      color: #fff;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 0;
-      cursor: pointer;
-      width: 30%;
-      margin-left: 35%; 
-    
-    }
-    
-    /* Responsive styles if needed */
-    @media (max-width: 768px) {
-      .form-row {
-        flex-direction: column;
-      }
-    
-      .form-row .form-group {
-        width: 100%;
-      }
-    }
-    
-    .footer {
-      background-color: #022f5e;
-      color: white;
-      text-align: center;
-      padding-top: 10px;
-      margin-top: auto;
-      
+}
+
+.footer {
+  background-color: #022f5e;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
+  grid-gap: 5px; /* Spacing between grid items */
+  align-items: start; /* Align grid items to the start of the grid area */
+  margin: 0 25px; /* Add margin to the grid container */
+  margin-top: 10px;
+}
+.address,
+.contact-info,
+.service-times,
+.social-media {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address p {
+  margin: 0;
+  font-size: small;
+  text-align: left;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: small;
+  text-align: left;
+}
+
+.service-times {
+  text-align: left;
+}
+
+.service-times p {
+  margin: 0;
+  font-size: small;
+  text-align: left;
+}
+
+.social-media {
+  margin-left: auto;
+  padding: 10px;
+}
+.social-media a {
+  margin-left: 15px;
+}
+
+/* Move the copyright to the bottom */
+.copyright {
+  margin-top: auto;
+  text-align: center;
+  font-size: smaller;
+}
+
+.fa {
+  display: inline-flex; /* Enable vertical and horizontal centering */
+  justify-content: center; /* Center icon horizontally */
+  align-items: center; /* Center icon vertically */
+  width: 22px; /* Adjust width for the circle */
+  height: 22px; /* Adjust height for the circle */
+  border-radius: 50%; /* Create a perfect circle */
+  padding: 0; /* Remove padding to fit within the circle */
+  font-size: 18px; /* Adjust font size for better visibility */
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
   }
-  
-  .footer-content {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
-      grid-gap: 5px; /* Spacing between grid items */
-      align-items: start; /* Align grid items to the start of the grid area */
-      margin: 0 25px; /* Add margin to the grid container */
-      margin-top: 10px;
-      
-  }
-  .address,.contact-info,.service-times {
-      margin-left: 15px;
-  }
-  
-  .address p {
-      margin: 0;
-      font-size: small;
-      text-align: left;
-  }
-  
-  .contact-info {
-      text-align: center;
-  }
-  
-  .contact-info p {
-      margin: 0;
-      font-size: small;
-      text-align: left;
-  }
-  
-  .service-times {
-      text-align: left;
-  }
-  
-  .service-times p {
-      margin: 0;
-      font-size: small;
-      text-align: left;
-  }
-  
+
   .social-media {
-      margin-left: auto;
-      padding: 10px;
+    justify-content: center; /* Center social media icons on medium screens */
   }
-  .social-media a {
-      margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stack the grid items on top of each other on small screens */
+    text-align: center;
   }
-  
-  /* Move the copyright to the bottom */
-  .copyright {
-      margin-top: auto;
-      text-align: left;
+
+  .social-media {
+    justify-content: center; /* Center social media icons on small screens */
   }
-  
-  .fa {
-      display: inline-flex; /* Enable vertical and horizontal centering */
-      justify-content: center; /* Center icon horizontally */
-      align-items: center; /* Center icon vertically */
-      width: 22px; /* Adjust width for the circle */
-      height: 22px; /* Adjust height for the circle */
-      border-radius: 50%; /* Create a perfect circle */
-      padding: 0; /* Remove padding to fit within the circle */
-      font-size: 18px; /* Adjust font size for better visibility */
-      text-align: center;
-      text-decoration: none;
-      margin: 5px 2px;
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  .fa-youtube {
-      background: #bb0000;
-      color: white;
-  }
-  
-  
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 1024px) {
-    .footer-grid {
-      grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-    }
-  
-    .social-media {
-      justify-content: center; /* Center social media icons on medium screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-grid {
-      grid-template-columns: 1fr; /* Stack the grid items on top of each other on small screens */
-      text-align: center;
-    }
-  
-    .social-media {
-      justify-content: center; /* Center social media icons on small screens */
-    }
-  }
-  
-  
+}
