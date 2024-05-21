@@ -3,7 +3,6 @@ body, html {
   margin: 0;
   padding: 0;
 }
-
 .containerText {
   max-width: 600px;
   margin: auto;
@@ -13,30 +12,27 @@ body, html {
 }
 .container {
   max-width: 100%;
-  padding: 0 20px; /* Add some padding to the sides */
-  margin: 0 auto; /* Center the container */
+  padding: 0 20px;
+  margin: 0 auto;
   text-align: center;
 }
-
 .circle-images {
   display: flex;
-  justify-content: space-around; /* Center the images horizontally */
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
-  margin-top: 20px; /* Add some spacing between the container and the images */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .circle-images div {
-  flex: 0 0 calc(25% - 20px); /* Adjust the width of each circle to fit 4 circles per row with spacing */
-  margin-bottom: 20px; /* Add some spacing between the circles */
-  text-align: center; /* Center align the content inside each circle */
+  flex: 0 0 calc(25% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .circle-images img {
   width: 270px;
   height: 270px;
-
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
-
+  max-width: 100%;
   border-radius: 50%;
   border: 1px solid #fff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -44,26 +40,22 @@ body, html {
 }
 
 .circle-description {
-  margin-top: 10px; /* Add some spacing between the image and the description */
+  margin-top: 10px;
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .circle-images div {
-    flex-basis: calc(50% - 20px); /* Adjust the width to fit 2 circles per row */
+    flex-basis: calc(50% - 20px);
   }
 
 }
-
 
 .rectangle-image {
   margin: 0 auto;
   display: block;
   position: relative;
   max-width: 1000px;
-
-
-
 }
 
 video {
@@ -74,7 +66,6 @@ video {
   height: 98%;
   object-fit: cover;
   z-index: -1;
-
 }
 
 .content {
@@ -85,7 +76,7 @@ z-index: 1;
 
 /* Make the image transparent */
 .content img {
-opacity: 0.7; /* Adjust the opacity value as needed */
+opacity: 0.5; /* Adjust the opacity value as needed */
 }
 
 
