@@ -1,18 +1,24 @@
+header.main-header {
+    background-color: rgba(0, 0, 0, 0.2); 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 110px;
+    z-index: 2;
+}
+
 #header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 5px;
 }
   
 #logo-container {
     display: flex;
     align-items: center;
-    margin-left: 50px;
-}
-  
-#logo {
-    margin-right: 10px;
+    margin-left: 20px;
 }
   
 #title-container {
@@ -24,13 +30,22 @@
 #title-line1,
 #title-line2 {
     margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#logo-container,
+#title-container,
+nav li a {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Add a slight shadow */
 }
   
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-right: 50px;
+    margin-right: 20px;
 }
   
 nav li {
@@ -41,8 +56,9 @@ nav li {
   
 nav a {
     text-decoration: none;
-    color: black;
-    font-size: 16px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
   
@@ -61,50 +77,53 @@ body, html {
 }
 
 .slider {
-    position: relative;
-    width: 1263px; /* Adjust width as needed */
-    height: 750px; /* Adjust height as needed */
-    margin: 0 auto; /* Centers the slider horizontally */
-    overflow: hidden; /* Hides overflowing content */
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+.slider .slides {
+    height: 100%; 
   }
   
-  /* Maintain aspect ratio of images and enable smooth transitions */
-  .slides {
+.slides {
     display: flex;
     width: 100%;
     height: 100%;
-    position: relative; /* Allows absolute positioning for slides */
-    transition: transform 0.5s ease-in-out; /* Smooth image transitions */
-  }
+    position: relative; 
+    /*transition: transform 0.5s ease-in-out;  Smooth image transitions */
+}
   
   .slide {
-    flex: 0 0 100%; /* Sets fixed width for each slide */
-    position: absolute; /* Positions slides absolutely within .slides */
+    flex: 0 0 100%; 
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* Ensures slide fills the entire .slides container width */
-    height: 100%; /* Ensures slide fills the entire .slides container height */
-    display: flex; /* Allows centering content within slides (if needed) */
-    align-items: center; /* Centers content vertically within slides */
-    justify-content: center; /* Centers content horizontally within slides */
-    overflow: hidden; /* Hides overflowing content within slides */
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
   }
   
-  .slide-img {
-    width: 100%; /* Fills the entire slide container */
-    height: auto; /* Maintains image aspect ratio */
-    object-fit: cover; /* Scales image to cover the container while preserving aspect ratio */
+.slide-img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    transition: transform 0.5s ease-in-out;
+}
+  
+  
+.slide.active {
+    opacity: 1; 
+    transform: translateX(0); 
   }
   
-  /* Style for the "active" class (applied to the currently displayed slide) */
-  .slide.active {
-    opacity: 1; /* Ensure full opacity for the active slide */
-    transform: translateX(0); /* Positions the active slide at the beginning */
-  }
   
-  /* Styles for inactive slides */
-  .slide:not(.active) {
-    opacity: 0; /* Hides inactive slides initially */
+.slide:not(.active) {
+    opacity: 0; 
     transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Adjust transition for inactive slides */
   }
 
@@ -113,7 +132,7 @@ body, html {
     background-color: #022f5e;
     display: flex;
     margin: 10px;
-    margin-top: 10px;
+    margin-top: 570px;
     height: 650px;
     border: 1px solid #ddd;  
     justify-content: space-between; 
@@ -124,27 +143,55 @@ body, html {
     color: #fcf9f9;
     margin-top: 50px;
     align-items: left;
-    margin-left: 30px;
+    margin-left: 80px;
 }
 .box-content h1 {
     font-family: "Sofia", sans-serif;
     font-size: 60px;
 }
 
-
-.square-box {
+.poster-slider {
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+    height: 400px; 
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .poster {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.5s ease-in-out; 
+  }
+  
+  .poster.active {
+    opacity: 1; 
+    z-index: 1; 
+  }
+  
+  .poster:not(.active) {
+    opacity: 0; 
+    z-index: 0; 
+    transform: translateX(100%); /* Position inactive slides off-screen to the right */
+  }
+  
+  .poster img {
+    width: 100%; 
+    height: auto;
+  }
+  
+  .square-box {
     background-color: white;
-    width: 400px; /* Adjust as needed */
-    height: 550px; /* Adjust as needed */
-    margin: 100px;  /* Add some margin for separation */
+    width: 400px;
+    height: 550px; 
+    margin: 100px;
     margin-top: 50px;
-    border: 1px solid #ddd; /* Optional border */
-}
-.square-box img {
-    width: 400px; /* Scales image to fit box width */
-    height: 400px; /* Scales image to fit box height */
-    object-fit: contain;
-}
+    border: 1px solid #ddd;
+  }
+
 .countdown-container {
     display: flex; /* Enables flexbox for timer elements */
     justify-content: space-between; /* Distributes timer boxes horizontally */
@@ -176,57 +223,25 @@ body, html {
  }
 
 .hotel-booking {
-    margin-top: 10px; /* Adjust as needed to create space below the timer */
+    margin-top: 10px; 
     margin-left: 70px;
 }
 
 .book-now-button {
-    background-color: #007bff; /* Adjust background color */
-    color: white; /* Adjust text color */
+    background-color: #007bff; 
+    color: white; 
     margin-top: 50px;
-    padding: 10px 85px; /* Adjust padding */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 16px; /* Adjust font size */
-    text-decoration: none; /* Remove underline on hover */
-    cursor: pointer; /* Indicate clickable element */
+    padding: 10px 85px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    text-decoration: none; 
+    cursor: pointer; 
   }
   
-.book-now-button:hover { /* Button hover effect (optional) */
-    background-color: #97bee7; /* Adjust hover background color */
+.book-now-button:hover { 
+    background-color: #97bee7; 
   }
-
-
-
-/*
-.box1{
-    margin: 10px;
-    padding: 60px;
-    background-color: #022f5e;
-    display: block;
-    
-}
-.box1 h1{
-    text-align: center;
-}
-
-.thumbnail-container{
-    align-items: left;
-    margin-bottom: 0px;
-}
-
-
-.box1 h1 {
-    color: #fcf9f9;
-    margin: 0px;
-    font-size: 40px;
-}
-
-.box1 p{
-    margin: 10;
-    color: #fcf9f9;
-}
-*/
 
 .footer {
     background-color: #022f5e;
@@ -239,10 +254,10 @@ body, html {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
-    grid-gap: 5px; /* Spacing between grid items */
-    align-items: start; /* Align grid items to the start of the grid area */
-    margin: 0 25px; /* Add margin to the grid container */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 5px; 
+    align-items: start; 
+    margin: 0 25px; 
     margin-top: 10px;
     
 }
@@ -284,7 +299,6 @@ body, html {
     margin-left: 15px;
 }
 
-/* Move the copyright to the bottom */
 .copyright {
     margin-top: auto;
     text-align: left;
