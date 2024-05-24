@@ -82,20 +82,20 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-  }
+}
 .slider .slides {
     height: 100%; 
-  }
+}
   
 .slides {
     display: flex;
     width: 100%;
     height: 100%;
     position: relative; 
-    /*transition: transform 0.5s ease-in-out;  Smooth image transitions */
+    transition: transform 0.5s ease-in-out;  
 }
   
-  .slide {
+.slide {
     flex: 0 0 100%; 
     position: absolute; 
     top: 0;
@@ -106,7 +106,7 @@ body, html {
     align-items: center; 
     justify-content: center; 
     overflow: hidden; 
-  }
+}
   
 .slide-img {
     width: 100%; 
@@ -115,16 +115,16 @@ body, html {
     transition: transform 0.5s ease-in-out;
 }
   
-  
 .slide.active {
     opacity: 1; 
     transform: translateX(0); 
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
   }
   
   
 .slide:not(.active) {
     opacity: 0; 
-    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Adjust transition for inactive slides */
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; 
   }
 
 
@@ -133,7 +133,7 @@ body, html {
     display: flex;
     margin: 10px;
     margin-top: 570px;
-    height: 650px;
+    height: 730px;
     border: 1px solid #ddd;  
     justify-content: space-between; 
 }
@@ -154,7 +154,7 @@ body, html {
     position: relative; 
     overflow: hidden; 
     width: 100%; 
-    height: 400px; 
+    height: 500px; 
     transition: transform 0.5s ease-in-out;
   }
   
@@ -169,13 +169,13 @@ body, html {
   
   .poster.active {
     opacity: 1; 
-    z-index: 1; 
+    z-index: 1;
   }
   
   .poster:not(.active) {
     opacity: 0; 
     z-index: 0; 
-    transform: translateX(100%); /* Position inactive slides off-screen to the right */
+    transform: translateX(100%); 
   }
   
   .poster img {
@@ -185,8 +185,8 @@ body, html {
   
   .square-box {
     background-color: white;
-    width: 400px;
-    height: 550px; 
+    width: 500px;
+    height: 630px; 
     margin: 100px;
     margin-top: 50px;
     border: 1px solid #ddd;
@@ -195,36 +195,36 @@ body, html {
 .countdown-container {
     display: flex; /* Enables flexbox for timer elements */
     justify-content: space-between; /* Distributes timer boxes horizontally */
-    margin-top: 10px; /* Optional spacing from the slider */
+    margin-top: -15px; /* Optional spacing from the slider */
   }
 
 .countdown-container span {
-    background-color: rgb(229, 238, 239); /* Adjust background color as needed */
-    width: 80px; /* Adjust width as needed */
-    height: 70px; /* Adjust height as needed */
-    display: flex; /* Enables flexbox for content within the span */
-    flex-direction: column; /* Stacks content vertically */
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-    margin: 7px; /* Optional margin for spacing */
-    border: 1px solid rgb(152, 147, 147); /* Optional border */
+    background-color: rgb(229, 238, 239); 
+    width: 85px; 
+    height: 70px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 10px; 
+    border: 1px solid rgb(152, 147, 147); 
     color: black;
-    font-size: 24px; /* Adjust font size for numbers */
+    font-size: 24px; 
 }
-.countdown-container span span {  /* Target both numbers and labels */
-    line-height: 40px; /* Adjust line-height for spacing (adjust as needed) */
-  }
-  /* Make sure this selector is specific enough (no typos) */
+.countdown-container span span {  
+    line-height: 40px; 
+}
+
 .countdown-container span:after {
-    content: attr(data-label); /* Use data attribute for label */
-    flex-grow: 1; /* Makes the empty element flexible to fill space */
-    font-size: 16px; /* Adjust font size for labels (optional) */
-    color: black; /* Adjust label color (optional) */  
+    content: attr(data-label); 
+    flex-grow: 1; 
+    font-size: 16px; 
+    color: black;   
  }
 
 .hotel-booking {
     margin-top: 10px; 
-    margin-left: 70px;
+    margin-left: 110px;
 }
 
 .book-now-button {
