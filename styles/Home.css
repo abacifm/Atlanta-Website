@@ -161,7 +161,7 @@ body, html {
     background-color: #022f5e;
     display: flex;
     margin: 10px;
-    margin-top: 570px;
+    margin-top: 708px;
     height: 730px;
     border: 1px solid #ddd;  
     justify-content: space-between; 
@@ -215,16 +215,16 @@ body, html {
   .square-box {
     background-color: white;
     width: 500px;
-    height: 630px; 
+    height: 635px; 
     margin: 100px;
     margin-top: 50px;
     border: 1px solid #ddd;
   }
 
 .countdown-container {
-    display: flex; /* Enables flexbox for timer elements */
-    justify-content: space-between; /* Distributes timer boxes horizontally */
-    margin-top: -15px; /* Optional spacing from the slider */
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 0px; 
   }
 
 .countdown-container span {
@@ -253,7 +253,7 @@ body, html {
 
 .hotel-booking {
     margin-top: 10px; 
-    margin-left: 110px;
+    margin-left: 120px;
 }
 
 .book-now-button {
