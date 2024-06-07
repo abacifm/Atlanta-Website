@@ -4,6 +4,7 @@ body, html {
   padding: 0;
 }
 .containerText {
+  padding-top: 130px;
   max-width: 600px;
   margin: auto;
   text-align: center;
@@ -81,30 +82,73 @@ opacity: 0.5; /* Adjust the opacity value as needed */
 
 
 
+header.main-header {
+  background-color: rgba(2, 47, 94, 1); /* Set a slight transparency for header */
+  position: fixed; /* Fix the header to the viewport */
+  top: 0; /* Position the header at the top of the viewport */
+  left: 0; /* Position the header at the left of the viewport */
+  width: 100%; /* Set the width to 100% of the viewport */
+  height: 110px;
+  z-index: 2;
+}
+
 #header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
 
-}
+  #logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
 
-#logo-container {
-  display: flex;
-  align-items: center;
-  margin-left: 100px;
-}
+  #title-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
 
-#logo {
-  margin-right: 10px;
-}
+  #title-line1,
+  #title-line2 {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
 
-#title-container {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-}
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+  }
 
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: blue;
+  }
+
+  @media (max-width: 768px) {
+    .slider-placeholder {
+      height: 300px;
+    }
+  }
 
 
 .show-more-btn {
@@ -249,99 +293,63 @@ button:focus {
 }
 
 
-.footer {
-  background-color: #022f5e;
-  color: white;
-  text-align: center;
-  padding-top: 10px;
-  margin-top: 20px;
-
-}
-
-.footer-content {
+ /* General footer styling - applies to all screens */
+ .footer-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
-  grid-gap: 5px; /* Spacing between grid items */
-  align-items: start; /* Align grid items to the start of the grid area */
-  margin: 0 25px; /* Add margin to the grid container */
-  margin-top: 10px;
-
-}
-.address,.contact-info,.service-times {
-  margin-left: 15px;
+  grid-template-columns: repeat(4, 1fr); /* Three columns for larger screens */
+  gap: 20px;
+  padding: 20px;
 }
 
-.address p {
-  margin: 0;
-  font-size: small;
-  text-align: left;
-}
-
-.contact-info {
-  text-align: center;
-}
-
-.contact-info p {
-  margin: 0;
-  font-size: small;
-  text-align: left;
-}
-
-.service-times {
-  text-align: left;
-}
-
-.service-times p {
-  margin: 0;
-  font-size: small;
-  text-align: left;
-}
-
-.social-media {
-  margin-left: auto;
-  padding: 10px;
-}
 .social-media a {
-  margin-left: 15px;
+  margin: 0 10px; /* Space between social media icons */
 }
 
-/* Move the copyright to the bottom */
-.copyright {
-  margin-top: auto;
-  text-align: left;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content > div, .social-media, .footer-content button {
+      display: none; /* Initially hide all sections and buttons */
+  }
+
+  .footer-content button {
+      display: block; /* Show buttons */
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      font-size: 16px;
+      color: #333;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+  }
+
+  .footer-content button:hover {
+      background-color: #e8e8e8;
+  }
+
+  .footer-content .active {
+      display: block; /* Show active section */
+  }
+
+  .social-media {
+      display: flex; /* Ensure social media icons are always visible */
+      justify-content: center; /* Align icons center */
+      padding: 10px 0;
+  }
 }
 
-.fa {
-  display: inline-flex; /* Enable vertical and horizontal centering */
-  justify-content: center; /* Center icon horizontally */
-  align-items: center; /* Center icon vertically */
-  width: 22px; /* Adjust width for the circle */
-  height: 22px; /* Adjust height for the circle */
-  border-radius: 50%; /* Create a perfect circle */
-  padding: 0; /* Remove padding to fit within the circle */
-  font-size: 18px; /* Adjust font size for better visibility */
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
+/* Make sure all content is visible on larger screens */
+@media (min-width: 769px) {
+  .footer-content > div, .social-media {
+      display: block;
+  }
+
+  .footer-content button {
+      display: none; /* Hide toggle buttons on larger screens */
+  }
 }
 
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-facebook {
-background: #3B5998;
-color: white;
-}
-
-.fa-twitter {
-background: #55ACEE;
-color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
 
 
 
