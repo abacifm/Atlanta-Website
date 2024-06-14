@@ -26,11 +26,8 @@ const nextSlide = () => {
   slides1[currentSlideIndex].classList.add('active');
 };
 
-const startSlider = setInterval(nextSlide, 20000); // Change 2000 to adjust interval (in milliseconds)
+const startSlider = setInterval(nextSlide, 10000); // Change 2000 to adjust interval (in milliseconds)
 
-// Optional: Add functionality for pausing the slider on hover
-slider1.addEventListener('mouseover', () => clearInterval(startSlider));
-slider1.addEventListener('mouseout', () => startSlider = setInterval(nextSlide, 9000));
 
 
 const targetDate = new Date("July 4, 2024 00:00:00 EST");
