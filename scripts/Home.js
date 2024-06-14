@@ -33,4 +33,44 @@ slider1.addEventListener('mouseover', () => clearInterval(startSlider));
 slider1.addEventListener('mouseout', () => startSlider = setInterval(nextSlide, 9000));
 
 
+const targetDate = new Date("July 4, 2024 00:00:00 EST");
+
+function updateCountdown() {
+// Get the current date and time
+const currentDate = new Date();
+      
+// Calculate the time difference between target and current date
+const timeDifference = targetDate.getTime() - currentDate.getTime();
+      
+// Check if the target date has passed
+if (timeDifference <= 0) {
+  // Target date has passed, display 0 for all units
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    return;
+  }
+      
+  // Calculate days, hours, minutes, and seconds remaining
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+      
+  // Update the display with leading zeros for aesthetics
+  document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
+  document.getElementById("hours").innerHTML = hours.toString().padStart(2, "0");
+  document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, "0");
+  document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, "0");
+  }
+      
+  // Call the updateCountdown function initially to display the time difference
+  updateCountdown();
+      
+  // Call the updateCountdown function every second to keep it updated
+  setInterval(updateCountdown, 1000);
+
+
+  
   
