@@ -197,6 +197,13 @@ body, html {
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; 
   }
 
+@media (max-width: 768px) {
+    .slider {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+    /* You can adjust media query styles for navigation links here (if needed) */
+}
+
 
 .box-container {
     flex: 1;
@@ -318,7 +325,6 @@ body, html {
     }
     .box-container {
         flex-direction: column;
-        margin-top: -95px;
     }
     .square-box{
         margin-left: 10px;
@@ -337,7 +343,7 @@ body, html {
         margin-top: -45px;
     }
     .hotel-booking {
-        margin-left: 50px;
+        margin-left: 55px;
     }
 }
 
@@ -347,7 +353,6 @@ body, html {
     }
     .box-container {
         flex-direction: column;
-        margin-top: -95px;
     }
     .square-box{
         margin-left: 10px;
@@ -366,8 +371,12 @@ body, html {
         margin-top: -45px;
     }
 
-
+    .hotel-booking {
+        margin-left: 55px;
+    }
 }
+
+
 
 .footer {
     background-color: #022f5e;
