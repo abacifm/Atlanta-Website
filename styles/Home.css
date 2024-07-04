@@ -130,6 +130,11 @@ nav-links a:hover {
     .hamburger {
         display: flex;
     }
+    #title-line1,
+    #title-line2 {
+        font-size: 13px;
+    }
+
 }
 
 
