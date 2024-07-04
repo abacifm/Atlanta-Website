@@ -199,7 +199,7 @@ body, html {
 
 @media (max-width: 768px) {
     .slider {
-      height: 300px; /* Adjust height for smaller screens */
+      height: 290px; /* Adjust height for smaller screens */
     }
     /* You can adjust media query styles for navigation links here (if needed) */
 }
