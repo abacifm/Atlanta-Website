@@ -331,6 +331,27 @@ body, html {
     .box-content h1 {
         font-size: 35px; 
     }
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    .box-container {
+        flex-direction: column;
+        margin-top: -95px;
+    }
+    .square-box{
+        margin-left: 10px;
+        width: 440px;
+    }
+    .box-content{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .box-content h1 {
+        font-size: 35px; 
+    }
 
 
 }
