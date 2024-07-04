@@ -336,6 +336,9 @@ body, html {
     .countdown-container span{
         margin-top: -45px;
     }
+    .hotel-booking {
+        margin-left: 50px;
+    }
 }
 
 @media screen and (max-width: 640px) {
