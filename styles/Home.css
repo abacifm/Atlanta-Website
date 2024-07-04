@@ -35,32 +35,39 @@ header.main-header {
     font-size: 15px;
 }
 
-#logo-container,
-#title-container,
-nav li a {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Add a slight shadow */
-}
-  
-nav ul {
+.nav-links {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-right: 20px;
+    display: flex;
+    gap: 20px;
 }
-  
-nav li {
+
+.nav-links li {
     display: inline-block;
     margin: 0 10px;
     text-align: center;
 }
-  
-nav a {
+
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 15px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
+
+nav-links a:hover {
+    color: blue;
+  }
+
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+}
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -91,9 +98,40 @@ nav a {
     display: block;
 }
   
-nav a:hover {
-    color: blue;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #022f5e;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 
 body{
     font-family: "Arial", sans-serif;
@@ -170,24 +208,10 @@ body, html {
     justify-content: space-between; 
 }
 
-@media screen and (max-width: 960px) {
-    .box-container {
-      margin-top: 300px; /* Adjust for smaller screens */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .box-container {
-      margin-top: 200px; /* Adjust for even smaller screens */
-    }
-}
-
-
-
 .box-content{
     text-align: center;
     color: #fcf9f9;
-    margin-top: 50px;
+    margin-top: 40px;
     align-items: left;
     margin-left: 80px;
 }
@@ -200,7 +224,7 @@ body, html {
     position: relative; 
     overflow: hidden; 
     width: 100%; 
-    height: 490px; 
+    height: 470px; 
   }
   
 .poster {
@@ -231,7 +255,7 @@ body, html {
 .square-box {
     background-color: white;
     width: 500px;
-    height: 630px; 
+    height: 600px; 
     margin: 100px;
     margin-top: 50px;
     border: 1px solid #ddd;
@@ -286,7 +310,28 @@ body, html {
   
 .book-now-button:hover { 
     background-color: #97bee7; 
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* Stack elements vertically */
+    }
+    .box-container {
+        flex-direction: column;
+    }
+    .square-box{
+        margin-left: 10px;
+    }
+    .box-content{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .box-content h1 {
+        font-size: 35px; 
+    }
+
+
+}
 
 .footer {
     background-color: #022f5e;
