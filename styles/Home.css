@@ -27,9 +27,7 @@ header.main-header {
     margin: 10px;
 }
   
-#title-line1,
-#title-line2 {
-    margin: 0;
+.title{
     color: white;
     font-weight: bold;
     font-size: 15px;
