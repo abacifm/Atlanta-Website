@@ -318,9 +318,11 @@ body, html {
     }
     .box-container {
         flex-direction: column;
+        margin-top: -95px;
     }
     .square-box{
         margin-left: 10px;
+        width: 440px;
     }
     .box-content{
         font-size: 12px;
