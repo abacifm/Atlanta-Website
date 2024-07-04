@@ -12,6 +12,7 @@
   <title>Home</title>
   <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/Header_Navbar.css">
   <!-- Canonical Link -->
   <link rel="canonical" href="https://www.atlantabethelacifm.org" />
 
@@ -43,36 +44,40 @@
 
 <body>
 
-  <header class="main-header header-style-one">
-    <div id="header-container">
-      <div id="logo-container">
-        <img src="images/apostolic-church-logo.png" alt="Atlanta Bethel Apostolic Church Logo" width="100" height="100">
-        <div id="title-container">
-          <p id="title-line1">ATLANTA BETHEL APOSTOLIC CHURCH</p>
-          <p id="title-line2">INTERNATIONAL FELLOWSHIP MINISTRY</p>
-        </div>
-      </div>
+  <!--header-->
+  <header>
+    <div class="logo-title">
+        <img src="images/apostolic-church-logo.png" alt="Logo" class="logo">
+        <h4 class="title">ATLANTA BETHEL APOSTOLIC CHURCH <br> INTERNATIONAL FELLOWSHIP MINISTRY</h4>
 
-      <nav>
-        <ul>
-          <li><a href="Home.html">HOME</a></li>
-          <li><a href="About.html">ABOUT US</a></li>
-          <li class="dropdown">MINISTRIES</a>
-            <div class="dropdown-content">
-              <a href="Fathers.html">Fathers Ministry</a>
-              <a href="Mothers.html">Mothers Ministry</a>
-              <a href="Youth.html">Youth Ministry</a>
-              <a href="Sunday School.html">Sunday School Ministry</a>
-            </div>
-          </li>
-          <li><a href="Media.html">MEDIA</a></li>
-          <li><a href="Contact.html">CONTACT</a></li>
-          <li><a href="Give.html">GIVE</a></li>
-        </ul>
-      </nav>
     </div>
-  </header>
-       
+    <nav>
+        <ul class="nav-links">
+
+            <li><a href="Home.html">HOME</a></li>
+              <li><a href="About.html">ABOUT US</a></li>
+              <li class="dropdown">MINISTRIES</a>
+                <div class="dropdown-content">
+                  <a href="Fathers.html">Fathers Ministry</a>
+                  <a href="Mothers.html">Mothers Ministry</a>
+                  <a href="Youth.html">Youth Ministry</a>
+                  <a href="Sunday School.html">Sunday School Ministry</a>
+                </div>
+              </li>
+              <li><a href="Media.html"><Main>MEDIA</Main></a></li>
+              <li><a href="Give.html"><Main>GIVE</Main></a></li>
+              <li class="current"><a href="Contact.html">CONTACT</a></li>
+
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>
+<script src="scripts/Header_Navbar.js"></script>
+
   <div class="container">
     <div class="image">
       <img src="images/Mothers.jpg" alt="Fathers Ministry">
@@ -116,7 +121,7 @@
             <a href="#" class="fa fa-twitter"></a>
             <a href="#" class="fa fa-youtube"></a>
           </div>
-            
+
 
         </div>
     </div>
@@ -127,6 +132,6 @@
       </p>
     </div>
 </footer>
-</div> 
+</div>
 </body>
 </html>
