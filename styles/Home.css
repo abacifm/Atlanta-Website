@@ -489,3 +489,42 @@ body, html {
     background: #bb0000;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: repeat(4, 1fr); /* Adjust columns for smaller screens */
+      margin: 0 5px; /* Reduce margins */
+    }
+  
+    .address, .contact-info, .service-times, .social-media {
+      margin-left: 15; /* Remove left margins */
+    }
+    .address p {
+        font-size: 10px;
+    }
+    .contact-info p {
+        font-size: 10px;
+    }
+    .service-times p {
+        font-size: 10px;
+    }
+  
+    .copyright {
+      flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    }
+  
+    .copyright p {
+      margin-left: 0; /* Remove left margin */
+    }
+  
+    .copyright a {
+      margin-left: auto; /* Move to the right side */
+      margin-top: 10px; /* Add margin top */
+    }
+    .fa {
+        width: 14px; /* Adjust width for the circle */
+        height: 14px; /* Adjust height for the circle */
+        font-size: 12px;
+
+    }
+  }
