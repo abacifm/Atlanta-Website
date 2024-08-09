@@ -141,7 +141,7 @@ header.main-header {
   }
 
   nav a:hover {
-    color: blue;
+    color: rgb(79, 79, 246);
   }
 
   @media (max-width: 768px) {
@@ -194,7 +194,7 @@ nav a {
 }
 
 nav a:hover {
-  color: blue;
+  color: rgb(71, 71, 246);
 }
 
 .slider-placeholder {
