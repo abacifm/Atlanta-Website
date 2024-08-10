@@ -1,9 +1,9 @@
 header.main-header {
-    background-color: rgba(0, 0, 0, 0.2); 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 120px;
     z-index: 2;
 }
@@ -15,19 +15,19 @@ header.main-header {
     padding: 5px;
     margin-left: 15px;
 }
-  
+
 #logo-container {
     display: flex;
     align-items: center;
     margin-left: 20px;
 }
-  
+
 #title-container {
     display: flex;
     flex-direction: column;
     margin: 0px;
 }
-  
+
 .title{
     color: white;
     font-weight: bold;
@@ -75,7 +75,7 @@ nav-links a:hover {
     font-weight: bold;
 
   }
-  
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -84,19 +84,19 @@ nav-links a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  
+
 .dropdown-content a {
     color: blue;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-  
-  
+
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
-  
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -129,7 +129,7 @@ nav-links a:hover {
     .hamburger {
         display: flex;
     }
-    
+
 
 }
 
@@ -145,57 +145,57 @@ body, html {
 }
 
 .wrapper {  display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .slider {
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 .slider .slides {
-    height: 100%; 
+    height: 100%;
 }
-  
+
 .slides {
     display: flex;
     width: 100%;
     height: 100%;
-    position: relative; 
-    transition: transform 0.5s ease-in-out;  
-}
-  
-.slide {
-    flex: 0 0 100%; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    overflow: hidden; 
-}
-  
-.slide-img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
+    position: relative;
     transition: transform 0.5s ease-in-out;
 }
-  
+
+.slide {
+    flex: 0 0 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slide-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
 .slide.active {
-    opacity: 1; 
-    transform: translateX(0); 
+    opacity: 1;
+    transform: translateX(0);
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
   }
-  
-  
+
+
 .slide:not(.active) {
-    opacity: 0; 
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out; 
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
   }
 
 @media (max-width: 768px) {
@@ -212,8 +212,8 @@ body, html {
     display: flex;
     margin: 10px;
     height: 100%;
-    border: 1px solid #ddd;  
-    justify-content: space-between; 
+    border: 1px solid #ddd;
+    justify-content: space-between;
 }
 
 .box-content{
@@ -229,95 +229,95 @@ body, html {
 }
 
 .poster-slider {
-    position: relative; 
-    overflow: hidden; 
-    width: 100%; 
-    height: 470px; 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 470px;
   }
-  
+
 .poster {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
-  
+
 .poster.active {
-    opacity: 1; 
+    opacity: 1;
     z-index: 1;
 }
-  
+
 .poster:not(.active) {
-    opacity: 0; 
-    z-index: 0; 
-    transform: translateX(-100%); 
+    opacity: 0;
+    z-index: 0;
+    transform: translateX(-100%);
 }
-  
+
 .poster img {
-    width: 100%; 
+    width: 100%;
     height: auto;
 }
-  
+
 .square-box {
     background-color: white;
     width: 500px;
-    height: 600px; 
+    height: 600px;
     margin: 100px;
     margin-top: 50px;
     border: 1px solid #ddd;
   }
 
 .countdown-container {
-    display: flex; 
-    justify-content: space-between; 
-    margin-top: 0px; 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
   }
 
 .countdown-container span {
-    background-color: rgb(229, 238, 239); 
-    width: 85px; 
-    height: 70px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    margin: 10px; 
-    border: 1px solid rgb(152, 147, 147); 
+    background-color: rgb(229, 238, 239);
+    width: 85px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 1px solid rgb(152, 147, 147);
     color: black;
-    font-size: 24px; 
+    font-size: 24px;
 }
-.countdown-container span span {  
-    line-height: 40px; 
+.countdown-container span span {
+    line-height: 40px;
 }
 
 .countdown-container span:after {
-    content: attr(data-label); 
-    flex-grow: 1; 
-    font-size: 16px; 
-    color: black;   
+    content: attr(data-label);
+    flex-grow: 1;
+    font-size: 16px;
+    color: black;
  }
 
 .hotel-booking {
-    margin-top: 10px; 
+    margin-top: 10px;
     margin-left: 120px;
 }
 
 .book-now-button {
-    background-color: #007bff; 
-    color: white; 
+    background-color: #007bff;
+    color: white;
     margin-top: 50px;
-    padding: 10px 85px; 
-    border: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    text-decoration: none; 
-    cursor: pointer; 
+    padding: 10px 85px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
   }
-  
-.book-now-button:hover { 
-    background-color: #97bee7; 
+
+.book-now-button:hover {
+    background-color: #97bee7;
 }
 
 @media screen and (max-width: 768px) {
@@ -330,7 +330,7 @@ body, html {
     .square-box{
         margin-left: 10px;
         width: 370px;
-        height: 550px; 
+        height: 550px;
         margin: 10px;
     }
     .box-content{
@@ -338,7 +338,7 @@ body, html {
         margin-left: 10px;
     }
     .box-content h1 {
-        font-size: 35px; 
+        font-size: 35px;
     }
     .countdown-container span{
         margin-top: -45px;
@@ -358,7 +358,7 @@ body, html {
     .square-box{
         margin-left: 10px;
         width: 370px;
-        height: 550px; 
+        height: 550px;
         margin: 10px;
     }
     .box-content{
@@ -366,7 +366,7 @@ body, html {
         margin-left: 10px;
     }
     .box-content h1 {
-        font-size: 35px; 
+        font-size: 35px;
     }
     .countdown-container span{
         margin-top: -45px;
@@ -390,12 +390,12 @@ body, html {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-gap: 5px; 
-    align-items: start; 
-    margin: 0 25px; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    align-items: start;
+    margin: 0 25px;
     margin-top: 10px;
-    
+
 }
 .address,.contact-info,.service-times {
     margin-left: 15px;
@@ -441,13 +441,13 @@ body, html {
 }
 .copyright p{
     margin-left: 385px;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .copyright a {
     background-color:green;
-    color: white; 
-    font-size: 12px; 
+    color: white;
+    font-size: 12px;
     text-decoration: none;
     border: none;
     padding: 0px;
@@ -455,8 +455,8 @@ body, html {
     margin-left: 407px;
     margin-top: 30px;
 }
-.copyright a:hover { 
-    background-color: #97bee7; 
+.copyright a:hover {
+    background-color: #97bee7;
   }
 
 .fa {
@@ -496,7 +496,7 @@ body, html {
       grid-template-columns: repeat(4, 1fr); /* Adjust columns for smaller screens */
       margin: 0 5px; /* Reduce margins */
     }
-  
+
     .address, .contact-info, .service-times, .social-media {
       margin-left: 15; /* Remove left margins */
     }
@@ -509,15 +509,15 @@ body, html {
     .service-times p {
         font-size: 10px;
     }
-  
+
     .copyright {
       flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
     }
-  
+
     .copyright p {
       margin-left: 0; /* Remove left margin */
     }
-  
+
     .copyright a {
       margin-left: auto; /* Move to the right side */
       margin-top: 10px; /* Add margin top */
